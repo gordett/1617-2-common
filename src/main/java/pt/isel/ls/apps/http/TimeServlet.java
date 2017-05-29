@@ -21,7 +21,7 @@ public class TimeServlet extends HttpServlet{
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         _logger.info("{} on '{}' with accept:'{}'", req.getMethod(), req.getRequestURI(), req.getHeader("Accept"));
-        _logger.warn("no, its not a warn");
+        _logger.warn("no, it's not a warn");
 
         Charset utf8 = Charset.forName("utf-8");
         resp.setContentType(String.format("text/plain; charset=%s",utf8.name()));
