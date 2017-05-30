@@ -24,6 +24,7 @@ public class FirstHttpServer {
 
         String portDef = System.getenv("PORT");
         int port = portDef != null ? Integer.valueOf(portDef) : LISTEN_PORT;
+        logger.info("Listening on port {}", port);
     	Server server = new Server(port);
         ServletHandler handler = new ServletHandler();
         server.setHandler(handler);
